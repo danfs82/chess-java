@@ -1,5 +1,7 @@
 package boardgame;
 
+import java.util.Scanner;
+
 public class Board {
 
 	private int rows;
@@ -36,6 +38,8 @@ public class Board {
 	public Piece piece(Position position) {
 		
 		if (!positionExists(position)) {
+			System.out.println("CHEGUEI");
+			
 			throw new BoardException ("Position not on the board");
 		}
 		return pieces[position.getRow()][position.getColumn()];
